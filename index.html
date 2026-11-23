@@ -7,6 +7,9 @@
 <meta name="description" content="BlinkPuppet is a free webcam avatar that blinks, talks and smiles with you. Runs in your browser, no download, no login. Green screen mode for OBS.">
 <link rel="canonical" href="https://naveen-ns0.github.io/blinkpuppet/">
 <meta property="og:type" content="website">
+  
+<meta name="google-site-verification" content="I2Nv5lFsmDEwxhFY4duI14UjG2b7LB9jltkYpDiGv80" />
+  
 <meta property="og:title" content="Free Webcam Avatar for Streamers | BlinkPuppet">
 <meta property="og:description" content="A cartoon avatar that copies your blinks, smiles and talking through your webcam. Free, in your browser, OBS-ready.">
 <meta property="og:url" content="https://naveen-ns0.github.io/blinkpuppet/">
@@ -28,26 +31,31 @@
 </script>
 </head>
 <body>
-<header class="valance"><div class="wrap"><p class="brand">BlinkPuppet</p></div></header>
+<header class="titlebar"><div class="wrap"><p class="brand">BlinkPuppet</p><span class="tag">Free webcam avatar</span></div></header>
 <main class="wrap">
 <h1>Free webcam avatar for streamers, right in your browser</h1>
 <p class="lead">A cartoon puppet that blinks, talks, smiles and frowns when you do. No download, no login.</p>
 
 <div class="ad" role="complementary" aria-label="Advertisement">ad space</div>
 
-<section class="theater" aria-label="Avatar stage">
+<section class="rig" aria-label="Avatar studio">
+<div class="dock">
+<div class="dockhead">Preview</div>
 <div id="stage" data-bg="stage"><div id="avatar" role="img" aria-label="Cartoon avatar mirroring your face"></div>
 <video id="cam" playsinline muted></video></div>
-<div class="controls">
-<button id="start" class="primary">Start camera</button>
-<label>Character <select id="char"><option value="blob">Blob</option><option value="robot">Robot</option><option value="cat">Cat</option></select></label>
-<label>Background <select id="bg"><option value="stage">Stage</option><option value="green">Green screen</option><option value="blue">Blue screen</option></select></label>
-<label>Smoothing <input id="smooth" type="range" min="0" max="85" value="45"></label>
-<label><input id="showcam" type="checkbox"> Show my camera</label>
-<button id="recenter">Recenter</button>
-<button id="clean">Clean view</button>
+<div class="bar"><button id="start" class="primary">Start camera</button><button id="clean">Clean view</button><span id="led" class="led" aria-hidden="true"></span><p id="status" role="status">Click Start camera. Your video stays on your device.</p></div>
 </div>
-<p id="status" role="status">Click Start camera. Your video stays on your device.</p>
+<aside class="side">
+<div class="dock"><div class="dockhead">Avatar</div><div class="body">
+<label>Character <select id="char"><option value="blob">Blob</option><option value="robot">Robot</option><option value="cat">Cat</option></select></label>
+<label>Background <select id="bg"><option value="stage">Preview grid</option><option value="green">Green screen</option><option value="blue">Blue screen</option></select></label>
+</div></div>
+<div class="dock"><div class="dockhead">Tracking</div><div class="body">
+<label>Smoothing <input id="smooth" type="range" min="0" max="85" value="45"></label>
+<label class="row"><input id="showcam" type="checkbox"> Show my camera</label>
+<button id="recenter">Recenter</button>
+</div></div>
+</aside>
 </section>
 
 <section>
