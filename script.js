@@ -46,7 +46,7 @@ if(running)return;status.textContent="Loading face tracking…";
 try{if(!lm)await load();}catch(e){status.textContent="Could not load the face model. Check that models/face_landmarker.task exists.";return}
 try{vid.srcObject=await navigator.mediaDevices.getUserMedia({video:{width:640,height:480,facingMode:"user"},audio:false});await vid.play()}
 catch(e){status.textContent="Camera blocked. Allow camera access in your browser address bar, then try again.";return}
-running=true;$("#start").textContent="Camera on";status.textContent="Tracking. Look straight ahead and press Recenter.";tick();};
+running=true;$("#led").classList.add("on");$("#start").textContent="Camera on";status.textContent="Tracking. Look straight ahead and press Recenter.";tick();};
 $("#char").onchange=e=>build(e.target.value);
 $("#bg").onchange=e=>stage.dataset.bg=e.target.value;
 $("#smooth").oninput=e=>sm=e.target.value/100;
@@ -54,4 +54,4 @@ $("#showcam").onchange=e=>vid.classList.toggle("on",e.target.checked);
 $("#recenter").onclick=()=>base=null;
 $("#clean").onclick=()=>document.body.classList.add("clean");
 addEventListener("keydown",e=>{if(e.key==="Escape")document.body.classList.remove("clean")});
-build("blob");render();
+build($("#char").value);stage.dataset.bg=$("#bg").value;sm=$("#smooth").value/100;vid.classList.toggle("on",$("#showcam").checked);render();
