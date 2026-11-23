@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Webcam Avatar for Streamers (Browser PNGtuber, No Download) | BlinkPuppet</title>
+<meta name="description" content="BlinkPuppet is a free webcam avatar that blinks, talks and smiles with you. Runs in your browser, no download, no login. Green screen mode for OBS.">
+<link rel="canonical" href="https://naveen-ns0.github.io/blinkpuppet/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Webcam Avatar for Streamers | BlinkPuppet">
+<meta property="og:description" content="A cartoon avatar that copies your blinks, smiles and talking through your webcam. Free, in your browser, OBS-ready.">
+<meta property="og:url" content="https://naveen-ns0.github.io/blinkpuppet/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Free Webcam Avatar for Streamers | BlinkPuppet">
+<meta name="twitter:description" content="A cartoon avatar that copies your blinks, smiles and talking through your webcam. Free and private.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"BlinkPuppet","url":"https://naveen-ns0.github.io/blinkpuppet/","applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","description":"Free browser-based webcam avatar that mirrors your blinks, smiles and talking.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is BlinkPuppet free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is free to use, with no login, no download and no account."}},
+{"@type":"Question","name":"Is my webcam video uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Face tracking runs entirely in your browser. No video or image is sent to a server or stored."}},
+{"@type":"Question","name":"How do I use the avatar in OBS?","acceptedAnswer":{"@type":"Answer","text":"Open BlinkPuppet in Chrome or Edge, choose the green background, click Clean view, then add a Window Capture in OBS and apply a Chroma Key filter."}},
+{"@type":"Question","name":"Can I use it as a virtual camera in Zoom or Google Meet?","acceptedAnswer":{"@type":"Answer","text":"Not directly, because websites cannot create a virtual camera. Share the browser window in your call, or capture it in OBS and start the OBS Virtual Camera."}},
+{"@type":"Question","name":"Why is my avatar choppy or delayed?","acceptedAnswer":{"@type":"Answer","text":"Close other heavy tabs, use Chrome or Edge, and make sure your room is well lit. Older phones and laptops may run slower."}}
+]}
+</script>
+</head>
+<body>
+<header class="valance"><div class="wrap"><p class="brand">BlinkPuppet</p></div></header>
+<main class="wrap">
+<h1>Free webcam avatar for streamers, right in your browser</h1>
+<p class="lead">A cartoon puppet that blinks, talks, smiles and frowns when you do. No download, no login.</p>
+
+<div class="ad" role="complementary" aria-label="Advertisement">ad space</div>
+
+<section class="theater" aria-label="Avatar stage">
+<div id="stage" data-bg="stage"><div id="avatar" role="img" aria-label="Cartoon avatar mirroring your face"></div>
+<video id="cam" playsinline muted></video></div>
+<div class="controls">
+<button id="start" class="primary">Start camera</button>
+<label>Character <select id="char"><option value="blob">Blob</option><option value="robot">Robot</option><option value="cat">Cat</option></select></label>
+<label>Background <select id="bg"><option value="stage">Stage</option><option value="green">Green screen</option><option value="blue">Blue screen</option></select></label>
+<label>Smoothing <input id="smooth" type="range" min="0" max="85" value="45"></label>
+<label><input id="showcam" type="checkbox"> Show my camera</label>
+<button id="recenter">Recenter</button>
+<button id="clean">Clean view</button>
+</div>
+<p id="status" role="status">Click Start camera. Your video stays on your device.</p>
+</section>
+
+<section>
+<h2>How to use BlinkPuppet</h2>
+<ol>
+<li>Click Start camera and allow access when your browser asks.</li>
+<li>Pick a character and look straight ahead, then press Recenter.</li>
+<li>For streaming, choose Green screen, click Clean view, and capture this browser window in OBS with a Chroma Key filter. Press Esc to leave Clean view.</li>
+</ol>
+</section>
+
+<div class="ad" role="complementary" aria-label="Advertisement">ad space</div>
+
+<section>
+<h2>Frequently asked questions</h2>
+<h3>Is BlinkPuppet free?</h3><p>Yes. It is free to use, with no login, no download and no account.</p>
+<h3>Is my webcam video uploaded anywhere?</h3><p>No. Face tracking runs entirely in your browser. No video or image is sent to a server or stored.</p>
+<h3>How do I use the avatar in OBS?</h3><p>Open BlinkPuppet in Chrome or Edge, choose the green background, click Clean view, then add a Window Capture in OBS and apply a Chroma Key filter.</p>
+<h3>Can I use it as a virtual camera in Zoom or Google Meet?</h3><p>Not directly, because websites cannot create a virtual camera. Share the browser window in your call, or capture it in OBS and start the OBS Virtual Camera.</p>
+<h3>Why is my avatar choppy or delayed?</h3><p>Close other heavy tabs, use Chrome or Edge, and make sure your room is well lit. Older phones and laptops may run slower.</p>
+</section>
+</main>
+<footer class="wrap"><p>BlinkPuppet is an independent tool. It is not affiliated with or endorsed by OBS Project, Google or MediaPipe.</p></footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

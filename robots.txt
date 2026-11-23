@@ -1,0 +1,4 @@
+# Note: crawlers only read robots.txt at the domain root; this copy is a harmless reference.
+User-agent: *
+Allow: /
+Sitemap: https://naveen-ns0.github.io/blinkpuppet/sitemap.xml
